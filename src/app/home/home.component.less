@@ -1,0 +1,68 @@
+.home {
+  position: relative;
+  .banner {
+    overflow: hidden;
+    height: 640px;
+    img {
+      position: relative;
+      left: 50%;
+      margin-left: -960px;
+      width: 1920px;
+      height: 640px;
+    }
+  }
+  .search {
+    width: 874px;
+    height: 86px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 554px;
+    left: 50%;
+    margin-left: -650px;
+    .left {
+      flex: 1;
+      height: 86px;
+      background: linear-gradient(#494949,#1d1d1d);
+      display: flex;
+      div {
+        flex: 1;
+        line-height: 86px;
+      }
+      .icon {
+        max-width: 60px;
+        text-align: right;
+      }
+      .text {
+        color: #fff;
+        text-align: center;
+        max-width: 100px;
+      }
+      .input {
+        max-width: 384px;
+        input {
+          height: 52px;
+          border-radius: 0px;
+        }
+      }
+    }
+    .right {
+      height: 86px;
+      max-width: 196px;
+      background-color: #fff;
+      flex: 1;
+      .button {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 50px;
+        color: #fff;
+        width: 130px;
+        margin: 18px 33px;
+        text-align: center;
+        border-radius: 3px;
+        background-color: #d7132e;
+      }
+    }
+  }
+}

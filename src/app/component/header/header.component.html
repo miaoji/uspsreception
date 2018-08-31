@@ -1,0 +1,50 @@
+<!-- <p>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/about">about</a>
+</p> -->
+<div class="header">
+  <div class="header-info">
+    <ul>
+      <li class="left">
+        <img class="logo" src="http://www.mingz-tech.com/static/image/logo.jpg" alt="明彰logo" />
+        <span class="title">明彰国际快递服务中心（IESC）</span>
+      </li>
+      <li class="right">
+        <span>微信登陆</span>
+        <span>邮箱登陆</span>
+        <span>注册</span>
+        <nz-dropdown class="language" [nzClickHide]="false" [(nzVisible)]="visible">
+          <a nz-dropdown>
+            语言<i class="anticon anticon-down"></i>
+          </a>
+          <ul nz-menu>
+            <li nz-menu-item (click)="languageChange('cn')">中文</li>
+            <li nz-menu-item (click)="languageChange('en')">English</li>
+          </ul>
+        </nz-dropdown>
+      </li>
+    </ul>
+  </div>
+  <div class="header-nav">
+    <ul>
+      <li>
+        <a routerLink="/home">首页</a>
+      </li>
+      <li>
+        <a routerLink="/ordersend">我要寄件</a>
+      </li>
+      <li>
+        <a routerLink="/prescription">参考时效</a>
+      </li>
+      <li>
+        <a routerLink="/site">服务站点</a>
+      </li>
+      <li>
+        <a routerLink="/about">关于我们</a>
+      </li>
+      <li>
+        <a routerLink="/send">寄件流程</a>
+      </li>
+    </ul>
+  </div>
+</div>
