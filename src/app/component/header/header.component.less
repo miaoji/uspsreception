@@ -1,15 +1,23 @@
 .header {
   .header-info{
-    ul {
-      width: 1300px;
+    .row {
+      max-width: 1300px;
       margin: auto;
       list-style: none;
-      display: flex;
-      height: 110px;
-      li {
-        flex: 1;
+      .mini {
+        img.logo {
+          width: 60px;
+          height: 60px;
+          overflow: hidden;
+          position: relative;
+          top: 17px;
+          left: 10px;
+        }
+      }
+      .col {
         &:first-child {
           text-align: left;
+          overflow: hidden;
         }
         &:last-child {
           text-align: right;
@@ -31,6 +39,7 @@
         &.right {
           line-height: 100px;
           color: #333;
+          padding-right: 10px;
           .ant-dropdown-link {
             color: #333;
             &:hover {
@@ -50,16 +59,13 @@
   }
   .header-nav{
     background: linear-gradient(#494949,#1d1d1d);
-    height: 75px;
     ul {
-      width: 1300px;
+      max-width: 1300px;
       margin: auto;
       list-style: none;
-      display: flex;
       li {
         line-height: 75px;
         max-width: 100px;
-        flex: 1;
         a {
           color: #fff;
           text-decoration: none;

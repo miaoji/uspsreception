@@ -4,16 +4,19 @@
 </p> -->
 <div class="header">
   <div class="header-info">
-    <ul>
-      <li class="left">
+    <div nz-row class="row">
+      <div nz-col nzXs="0" nzLg="12" class="left col">
         <img class="logo" src="http://www.mingz-tech.com/static/image/logo.jpg" alt="明彰logo" />
         <span class="title">明彰国际快递服务中心（IESC）</span>
-      </li>
-      <li class="right">
+      </div>
+      <div nz-col nzXs="2" nzLg="0" class="mini">
+        <img class="logo" src="http://www.mingz-tech.com/static/image/logo.jpg" alt="明彰logo" />
+      </div>
+      <div nz-col nzXs="22" nzLg="12" class="right col">
         <span>微信登陆</span>
         <span>邮箱登陆</span>
         <span>注册</span>
-        <nz-dropdown class="language" [nzClickHide]="false" [(nzVisible)]="visible">
+        <nz-dropdown class="language" [nzClickHide]="false" [(nzVisible)]="visible" [nzPlacement]="'bottomRight'">
           <a nz-dropdown>
             语言<i class="anticon anticon-down"></i>
           </a>
@@ -22,27 +25,27 @@
             <li nz-menu-item (click)="languageChange('en')">English</li>
           </ul>
         </nz-dropdown>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
   <div class="header-nav">
-    <ul>
-      <li>
+    <ul nz-row>
+      <li nz-col nzLg="12" nzXs="12">
         <a routerLink="/home">首页</a>
       </li>
-      <li>
+      <li nz-col nzLg="12" nzXs="12">
         <a routerLink="/ordersend">我要寄件</a>
       </li>
-      <li>
+      <li nz-col nzLg="12" nzXs="12">
         <a routerLink="/prescription">参考时效</a>
       </li>
-      <li>
+      <li nz-col nzLg="12" nzXs="12">
         <a routerLink="/site">服务站点</a>
       </li>
-      <li>
+      <li nz-col nzLg="12" nzXs="12">
         <a routerLink="/about">关于我们</a>
       </li>
-      <li>
+      <li nz-col nzLg="12" nzXs="12">
         <a routerLink="/send">寄件流程</a>
       </li>
     </ul>

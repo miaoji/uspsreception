@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-
+  visible: boolean;
   constructor() { }
 
   ngOnInit() {
@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   languageChange(data: string): void {
     console.log('data', data)
+    this.visible = false
   }
 
 }
