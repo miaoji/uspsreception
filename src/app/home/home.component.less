@@ -76,7 +76,9 @@
   }
   .service {
     max-width: 1300px;
-    margin: auto;
+    margin: 0 auto 30px;
+    zoom:1;
+    &:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
      /* 提示文字 */
     @media screen and (max-width:768px){
       .main_hint {
