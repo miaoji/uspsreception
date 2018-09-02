@@ -9,6 +9,6 @@ import { initToken } from '../utils';
 export class AppComponent {
   ngOnInit() {
     initToken()
-    console.log(1231)
+    console.log(1231);
   }
 }
