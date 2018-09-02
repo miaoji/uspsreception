@@ -1,6 +1,8 @@
-<div class="home">
+<div class="home" [ngClass]="{'fadeIn': isloading, 'animated': isloading}">
   <div class="banner">
-    <img src="http://www.mingz-tech.com/static/image/index_banner.jpg" alt="寄件" />
+    <div class="img">
+      <img src="http://www.mingz-tech.com/static/image/index_banner.jpg" alt="寄件" />
+    </div>
   </div>
   <div class="search">
     <div class="left">

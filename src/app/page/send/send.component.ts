@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./send.component.less']
 })
 export class SendComponent implements OnInit {
+  isloading: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+    this.isloading = true;
   }
 
 }

@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prescription.component.less']
 })
 export class PrescriptionComponent implements OnInit {
+  isloading: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+    this.isloading = true;
   }
 
 }

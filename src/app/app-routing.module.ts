@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { OrdersendComponent } from './ordersend/ordersend.component';
-import { SiteComponent } from './site/site.component';
-import { SendComponent } from './send/send.component';
-import { PrescriptionComponent } from './prescription/prescription.component';
+import { HomeComponent } from './page/home/home.component';
+import { AboutComponent } from './page/about/about.component';
+import { OrdersendComponent } from './page/ordersend/ordersend.component';
+import { SiteComponent } from './page/site/site.component';
+import { SendComponent } from './page/send/send.component';
+import { PrescriptionComponent } from './page/prescription/prescription.component';
 const routes: Routes = [
   {
     path: 'about',

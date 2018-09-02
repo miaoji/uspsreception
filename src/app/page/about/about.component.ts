@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.less']
 })
 export class AboutComponent implements OnInit {
+  isloading: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+    this.isloading = true;
   }
 
 }
