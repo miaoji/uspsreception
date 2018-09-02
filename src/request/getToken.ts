@@ -8,5 +8,4 @@ export async function getToken(params: any) {
     auth: false,
     params
   })
-
 }
