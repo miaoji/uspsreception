@@ -1,7 +1,3 @@
-<!-- <p>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/about">about</a>
-</p> -->
 <div class="header">
   <div class="header-info">
     <div nz-row class="row">
@@ -16,12 +12,12 @@
         <span>微信登陆</span>
         <span>邮箱登陆</span>
         <span>注册</span>
-        <nz-dropdown class="language" [nzClickHide]="false" [(nzVisible)]="visible" [nzPlacement]="'bottomRight'">
+        <nz-dropdown class="language" nzTrigger="click" [nzClickHide]="false" [(nzVisible)]="visible" nzPlacement="bottomRight">
           <a nz-dropdown>
             语言<i class="anticon anticon-down"></i>
           </a>
           <ul nz-menu>
-            <li nz-menu-item (click)="languageChange('cn')">中文</li>
+            <li nz-menu-item (click)="languageChange('ch')">中文</li>
             <li nz-menu-item (click)="languageChange('en')">English</li>
           </ul>
         </nz-dropdown>

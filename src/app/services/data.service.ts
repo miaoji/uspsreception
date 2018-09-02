@@ -4,11 +4,14 @@ import request from '../../utils/request';
 @Injectable()
 export class DataService {
   users: any[];
+  username: string = 'aaa';
   getToken: string = 'http://api.mingz-tech.com/login/getToken';
-  constructor() { }
+  constructor() {}
+
   async getUsers() {
     return request({
       url: this.getToken
     })
   }
+
 }

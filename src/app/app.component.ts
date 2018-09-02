@@ -8,7 +8,7 @@ import { initToken } from '../utils';
 })
 export class AppComponent {
   ngOnInit() {
+    // 获取请求使用的token
     initToken()
-    console.log(1231);
   }
 }

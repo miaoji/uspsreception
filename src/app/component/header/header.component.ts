@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { I18nService } from '../../services/i18n.service';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   visible: boolean;
-  constructor() { }
+  constructor(public i18n: I18nService) { }
 
   ngOnInit() {
   }
 
   languageChange(data: string): void {
-    console.log('data', data)
+    this.i18n.setLang(data)
     this.visible = false
   }
 
