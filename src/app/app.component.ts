@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { initToken } from '../utils';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'usps';
+  ngOnInit() {
+    initToken()
+    console.log(1231)
+  }
 }

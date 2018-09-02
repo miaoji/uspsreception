@@ -20,6 +20,7 @@ import { SiteComponent } from './page/site/site.component';
 import { SendComponent } from './page/send/send.component';
 import { PrescriptionComponent } from './page/prescription/prescription.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { DataService } from './services/data.service';
 
 registerLocaleData(zh);
 
@@ -43,7 +44,7 @@ registerLocaleData(zh);
     HttpClientModule,
     NgZorroAntdModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [DataService, { provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

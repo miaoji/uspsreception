@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-ordersend',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersendComponent implements OnInit {
   isloading: boolean = false;
+  token: string;
 
-  constructor() { }
+  constructor(public data: DataService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.isloading = true;
   }
 
