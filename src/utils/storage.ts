@@ -1,5 +1,5 @@
-import confgit from './confgit';
-const { localPrefix } = confgit
+import config from './config';
+const { localPrefix } = config
 /**
  * [对localStorage操作进行封装]
  * @param  {String}  key    [存储的字段名字]
