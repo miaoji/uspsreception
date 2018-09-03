@@ -11,7 +11,7 @@ export class I18nService {
   t: any;
 
   constructor() {
-    const language = storage({ type: 'get', key: 'language' })
+    const language = storage({ type: 'get', key: 'language' }) || 'ch'
     this.setLang(language)
   }
 

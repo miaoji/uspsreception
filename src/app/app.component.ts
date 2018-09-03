@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { initToken } from '../utils';
+import { UserInfoService } from './services/user-info.service'
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,6 @@ import { initToken } from '../utils';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  ngOnInit() {
-    // 获取请求使用的token
-    initToken()
-  }
+  constructor(public user: UserInfoService) { }
+  ngOnInit() {}
 }

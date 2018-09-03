@@ -1,6 +1,7 @@
 import { getToken } from '../request/getToken';
 import md5 from 'js-md5';
 import { storage } from '../utils/storage';
+import { saveOpenId } from './user'
 
 export async function initToken() {
   const timestamp = new Date().getTime()
@@ -9,7 +10,6 @@ export async function initToken() {
   const realStr = 'nonceStr=' + nonceStr + '&timestamp=' + timestamp + '&key=' + key
   const sign = md5(realStr)
   const data = await getToken({ nonceStr, timestamp, sign });
-  console.log('data', data);
   if (data.statusCode === 200) {
     storage({
       type: 'set',
@@ -19,4 +19,9 @@ export async function initToken() {
   } else {
     initToken()
   }
+}
+
+export {
+  storage,
+  saveOpenId
 }

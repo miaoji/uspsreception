@@ -6,9 +6,24 @@
         <span class="title">{{i18n.t.header.title || '明彰国际快递服务中心（IESC）'}}</span>
       </div>
       <div nz-col nzXs="22" nzLg="12" class="right col">
-        <span>{{i18n.t.header.t1||'微信登陆'}}</span>
-        <span>{{i18n.t.header.t2||'邮箱登陆'}}</span>
-        <span>{{i18n.t.header.t3||'注册'}}</span>
+        <ng-container *ngIf="userInfo.isLogin">
+          <span><img [src]="userInfo.userInfo.headimgurl" alt="用户头像"></span>
+
+          <nz-dropdown class="language" nzTrigger="click" [nzClickHide]="false" [(nzVisible)]="userVisible" nzPlacement="bottomRight">
+            <a nz-dropdown>
+              <span>{{userInfo.userInfo.nickName}}<i class="anticon anticon-down"></i></span>
+            </a>
+            <ul nz-menu>
+              <li nz-menu-item (click)="loginOut()">登出</li>
+              <li nz-menu-item>个人中心</li>
+            </ul>
+          </nz-dropdown>
+        </ng-container>
+        <ng-container *ngIf="!userInfo.isLogin">
+          <span (click)="onWeChatLogin()">{{i18n.t.header.t1||'微信登陆'}}</span>
+          <span>{{i18n.t.header.t2||'邮箱登陆'}}</span>
+          <span>{{i18n.t.header.t3||'注册'}}</span>
+        </ng-container>
         <nz-dropdown class="language" nzTrigger="click" [nzClickHide]="false" [(nzVisible)]="visible" nzPlacement="bottomRight">
           <a nz-dropdown>
             {{i18n.t.header.t4||'语言'}}<i class="anticon anticon-down"></i>
