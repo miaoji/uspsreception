@@ -1,14 +1,19 @@
 // 用户多语言转换的一个服务
 import { Injectable } from '@angular/core';
-import en from '../../assets/i18n/en';
-import ch from '../../assets/i18n/ch';
+import { en, ch } from '../../assets/i18n';
 import { storage } from '../../utils/storage';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class I18nService {
-  t: any = ch;
+  t: any;
+
+  constructor() {
+    const language = storage({ type: 'get', key: 'language' })
+    this.setLang(language)
+  }
 
   /**
    * [切换语言](默认为中文)

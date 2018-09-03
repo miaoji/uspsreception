@@ -5,9 +5,6 @@
         <img class="logo" src="../../../assets/image/logo.jpg" alt="明彰logo" />
         <span class="title">{{i18n.t.header.title || '明彰国际快递服务中心（IESC）'}}</span>
       </div>
-      <div nz-col nzXs="2" nzLg="0" class="mini">
-        <img class="logo" src="../../../assets/image/logo.jpg" alt="明彰logo" />
-      </div>
       <div nz-col nzXs="22" nzLg="12" class="right col">
         <span>{{i18n.t.header.t1||'微信登陆'}}</span>
         <span>{{i18n.t.header.t2||'邮箱登陆'}}</span>
@@ -24,26 +21,55 @@
       </div>
     </div>
   </div>
-  <div class="header-nav">
-    <ul nz-row>
-      <li nz-col nzLg="12" nzXs="12">
-        <a routerLink="/home">首页</a>
-      </li>
-      <li nz-col nzLg="12" nzXs="12">
-        <a routerLink="/ordersend">我要寄件</a>
-      </li>
-      <li nz-col nzLg="12" nzXs="12">
-        <a routerLink="/prescription">参考时效</a>
-      </li>
-      <li nz-col nzLg="12" nzXs="12">
-        <a routerLink="/site">服务站点</a>
-      </li>
-      <li nz-col nzLg="12" nzXs="12">
-        <a routerLink="/about">关于我们</a>
-      </li>
-      <li nz-col nzLg="12" nzXs="12">
-        <a routerLink="/send">寄件流程</a>
-      </li>
-    </ul>
+  <div nz-row>
+    <div nz-col nzXs="0" nzLg="24" class="header-nav">
+      <ul class="clear">
+        <li>
+          <a routerLink="/home">{{i18n.t.header.t5||'首页'}}</a>
+        </li>
+        <li>
+          <a routerLink="/ordersend">{{i18n.t.header.t6||'我要寄件'}}</a>
+        </li>
+        <li>
+          <a routerLink="/prescription">{{i18n.t.header.t7||'参考时效'}}</a>
+        </li>
+        <li>
+          <a routerLink="/site">{{i18n.t.header.t7||'服务站点'}}</a>
+        </li>
+        <li>
+          <a routerLink="/about">{{i18n.t.header.t8||'关于我们'}}</a>
+        </li>
+        <li>
+          <a routerLink="/send">{{i18n.t.header.t9||'寄件流程'}}</a>
+        </li>
+      </ul>
+    </div>
+    <div nz-col nzXs="2" nzLg="0">
+      <nz-dropdown>
+        <a nz-dropdown>
+          <i class="anticon anticon-bars"></i>
+        </a>
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>
+            <a routerLink="/home">{{i18n.t.header.t5||'首页'}}</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/ordersend">{{i18n.t.header.t6||'我要寄件'}}</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/prescription">{{i18n.t.header.t7||'参考时效'}}</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/site">{{i18n.t.header.t7||'服务站点'}}</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/about">{{i18n.t.header.t8||'关于我们'}}</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/send">{{i18n.t.header.t9||'寄件流程'}}</a>
+          </li>
+        </ul>
+      </nz-dropdown>
+    </div>
   </div>
 </div>
