@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor(public i18n: I18nService) { }
 
   ngOnInit() {
+    console.log('ttt', this.i18n.t)
   }
 
   languageChange(data: string): void {
